@@ -1,0 +1,642 @@
+1200*47
+62985*0.2
+62985*0.01
+62985*0.02
+62985*0.04
+62985*0.05
+62985-65000
+62985-66000
+62985-69000
+25.73*4000
+25.73*3000
+25.73*55000
+25.73*6000
+25.73*3000
+4500-4500*0.36
+2880/12
+45000-45000*0.36
+28800/12
+430000-80000-10000-24000-50000
+663203991
+13456/57065
+11033+2770+20703+9103
+43609/57065
+24+76
+13456+11033+2770+20703+9103
+2416+1020+832+264+247+189+168+301+102+178
+62782-5717
+95239-32457
+57065/13456
+13456/57065
+47000+0.011*47000
+517/12
+43*45
+94993-67456
+22809+1553+933+695+322+239+233+283+215+69+186
+1635+2523
+4158+4992
+8275+4992+4158
+17425+8988+8729+5579+11142+11593
+17425+8988+8729+5579+11142+15593
+67456+27533
+22809+1553+933+695+322+239+233+283+215+69+186
+27537+67456
+22809+1553+933+695+322+239+233+283+215+69+186
+67456+27537
+4158+4992+8275
+8275+4992+4158
+165+110
+110/275
+478+376
+?fdr
+x<-c(0.05,0.007,0.1,1,4,5)
+p.adjust(x, method = "BH")
+0.05/5
+x<-c(0.05,0.007,0.1,1,4,5,10,0.02,12)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08,0.09,0.1,0.2)
+p.adjust(x, method = "BH")
+log2(0.01+1)
+2872-1100-600
+2958-1100-600
+31*1000000/3600000
+2890-1200-600
+71773-25000
+46773*12
+46773*12*3
+46773*12*5
+1166+34
+1166+34+76
+30000/637
+636*6
+636*10
+636*15
+636*20
+636*30
+636*40
+636*50
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+library(scone)
+library(SCONE)
+library("SCONE")
+library("scone")
+library(scone)
+biocLite("YosefLab/scone", dependencies=TRUE)
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+install.packages("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+library("scone")
+vignette("scone")
+vignette(scone)
+vignette("scone")
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+library(scRNAseq)
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scRNAseq")
+600*7.5
+600*20
+600*30
+600*50
+600*60
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+fluidigm
+head(exprs(fluidigm))
+metadata(fluidigm)$which_qc
+is_select = colData(fluidigm)$Coverage_Type == "High" #
+fluidigm = fluidigm[,is_select]#
+#
+# Retain only detected transcripts#
+fluidigm = fluidigm[which(apply(assay(fluidigm) > 0,1,any)),]
+cc <- c(brewer.pal(9, "Set1"))#
+#
+# One batch per Biological Condition#
+batch = factor(colData(fluidigm)$Biological_Condition)#
+#
+# Alignment Quality Metrics#
+qc = colData(fluidigm)[,metadata(fluidigm)$which_qc]#
+#
+# Barplot of read proportion mapping to human transcriptome#
+ralign = qc$RALIGN#
+o = order(ralign)[order(batch[order(ralign)])] # Order by batch, then value#
+#
+barplot(ralign[o], col=cc[batch][o], border=cc[batch][o], main="Percentage of reads mapped")#
+legend("bottomleft", legend=levels(batch), fill=cc,cex=0.4)
+731*7.69
+98*7.69
+95*7
+30000/95
+95*50
+95*100
+95*200
+95*300
+95*400
+95*500
+95*600
+34*3600
+34*3300
+34*3200
+5*200000
+install.package("rpython")
+install.packages("rpython")
+install.packages("rPython")
+library(genefilter)#
+library(statmod)#
+require(ggplot2)#
+library(gplots)#
+require(DESeq2)#
+library(scLVM)
+install.packages("rPython")
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("genefilter")
+install.packages("statmod")
+install.packages("rPython")
+library(rPython)
+python.exec("import sys; print sys.version")
+library(rPython)
+python.exec("import sys; print sys.version")
+system("python --version")
+95*8.8
+95*100
+5000/8
+10000/8
+10000*10
+10000*2
+10000*3
+10000*4
+10000*3
+17/24
+9.75*905
+9.75*95
+3000/10.80
+375*100
+375*50
+375*60
+375*80
+375*20
+375*50
+375*60
+375*80
+21-19.40
+1.6*5000
+2958-950-100-150-40-600
+1118*45
+1118+500
+71481*12
+71481*12*3
+71481*12*5
+48327*0.01
+48327+483
+10.80-9.60
+1.2*375
+45000/12
+library(fastICA)
+library("fastICA")
+install.packages("fastICA")
+library("fastICA")
+highway <- as.matrix(read.table("highway.dat",header=T))#
+# just to compare with our PCA and FA analyses from last time#
+#
+X <- highway[,-1]#
+#
+pc.cor <- princomp(X,cor=T)#
+#
+ica <- fastICA(X,n.comp=11)#
+names(ica)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+install.packages("devtools")
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+install_github("satijalab/seurat")
+library(devtools)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+20.8-19.40
+1.4*5000
+40-20.40
+19.6*5000
+6*5000
+98000+30000
+2890-950-200-600
+1961+232
+543+9+202+227
+1392+20+0+580+0+755+3
+766200-0.40*766200
+459720/12
+509+554+541
+1100+1193
+library("rhdf5")
+install.packages("rhdf5")
+160479-900000
+739521-160479
+65113*2
+130226+169071
+6700-2123
+34740*2
+25740+18000
+890+490
+890*2
+1780+490
+956*2
+1912*4
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9.masked")
+925*2
+958+500
+958+400
+50000*12
+50000*12*3
+430000-200000
+1098+1193
+350*12
+1970/3
+80-55
+400+397
+400+397+396
+430000/3
+430000/2
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+my.df<-rbind(df1,df2)#
+#
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+#pdf(file="Freezed.V2.qPCR.RNA-seq.correlation.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+, Log2)",#
+		ylab="RNA-Seq (BCR-ABL- Vs BCR-ABL+, Log2 (RPKM))",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR Vs RNA-Seq Correlation (OX1407-Remission)")#
+#polygon(c(rev(newx), newx), c(rev(preds[ ,3]), preds[ ,2]), col = 'grey80', border = NA)#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(2,-2,paste("Pearson correlation= ",cor(my.df$x,my.df$y),sep=""))#
+dev.off()#
+# predicts + interval#
+n<-50#
+x<-sample(40:70,n,rep=T)#
+y<-.7*x+rnorm(n,sd=5)#
+plot(x,y,xlim=c(20,90),ylim=c(0,80))#
+mylm<-lm(y~x)#
+abline(mylm,col="red")#
+newx<-seq(min(x),max(x))#
+prd<-predict(mylm,newdata=data.frame(x=newx),interval = c("confidence"))#
+lines(newx,prd[,2],col="red",lty=2)#
+lines(newx,prd[,3],col="red",lty=2)
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+my.df<-rbind(df1,df2)#
+#
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Freezed.V2.qPCR.RNA-seq.correlation.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+, Log2)",#
+		ylab="RNA-Seq (BCR-ABL- Vs BCR-ABL+, Log2 (RPKM))",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR Vs RNA-Seq Correlation (OX1407-Remission)")#
+#polygon(c(rev(newx), newx), c(rev(preds[ ,3]), preds[ ,2]), col = 'grey80', border = NA)#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(2,-2,paste("Pearson correlation= ",cor(my.df$x,my.df$y),sep=""))#
+dev.off()#
+# predicts + interval#
+n<-50#
+x<-sample(40:70,n,rep=T)#
+y<-.7*x+rnorm(n,sd=5)#
+plot(x,y,xlim=c(20,90),ylim=c(0,80))#
+mylm<-lm(y~x)#
+abline(mylm,col="red")#
+newx<-seq(min(x),max(x))#
+prd<-predict(mylm,newdata=data.frame(x=newx),interval = c("confidence"))#
+lines(newx,prd[,2],col="red",lty=2)#
+lines(newx,prd[,3],col="red",lty=2)#
+#
+dev.off()
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]
+df2
+plot(df2[,c(x,y)])
+plot(df2[,c(2:3)
+]
+plot(df2[,c(2:3)]
+)
+my.df<-rbind(df1,df2)
+my.df
+?format
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+#########################################
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+, Log2)",#
+		ylab="RNA-Seq (BCR-ABL- Vs BCR-ABL+, Log2 (RPKM))",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR Vs RNA-Seq Correlation (OX1407-Remission)")#
+#polygon(c(rev(newx), newx), c(rev(preds[ ,3]), preds[ ,2]), col = 'grey80', border = NA)#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(2,-2,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=4),sep=""))#
+dev.off()#
+#n<-50#
+#x<-sample(40:70,n,rep=T)#
+#y<-.7*x+rnorm(n,sd=5)#
+#plot(x,y,xlim=c(20,90),ylim=c(0,80))#
+#mylm<-lm(y~x)#
+#abline(mylm,col="red")#
+#newx<-seq(min(x),max(x))#
+#prd<-predict(mylm,newdata=data.frame(x=newx),interval = c("confidence"))#
+#lines(newx,prd[,2],col="red",lty=2)#
+#lines(newx,prd[,3],col="red",lty=2)#
+#
+#dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+#########################################
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+, Log2)",#
+		ylab="RNA-Seq (BCR-ABL- Vs BCR-ABL+, Log2 (RPKM))",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR Vs RNA-Seq Correlation (OX1407-Remission)")#
+#polygon(c(rev(newx), newx), c(rev(preds[ ,3]), preds[ ,2]), col = 'grey80', border = NA)#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(1,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+#########################################
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+, Log2)",#
+		ylab="RNA-Seq (BCR-ABL- Vs BCR-ABL+, Log2 (RPKM))",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR Vs RNA-Seq Correlation (OX1407-Remission)")#
+#polygon(c(rev(newx), newx), c(rev(preds[ ,3]), preds[ ,2]), col = 'grey80', border = NA)#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(3,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+#########################################
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+), Log2fc",#
+		ylab="RNA-seq (BCR-ABL- Vs BCR-ABL+), Log2fc",xlim=c(-4,6),ylim=c(-4,6),#
+		main="")#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(3,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+#########################################
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+), Log2fc",#
+		ylab="RNA-seq (BCR-ABL- Vs BCR-ABL+), Log2fc",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR and RNA-seq correlation")#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(3,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)
+my.df
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+################save data matrix to a file#####################################
+write.table(my.df,file="Fig2f.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=TRUE)#
+###############################################################################
+#
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+), Log2fc",#
+		ylab="RNA-seq (BCR-ABL- Vs BCR-ABL+), Log2fc",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR and RNA-seq correlation")#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(3,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()
+################################################################################
+df<-read.table("Combined.qPCR.RNA-seq.txt",header=T)#
+df<-df[c("gene","delta_delta_ct","log2fc")]#
+colnames(df)<-c("gene","x","y")#
+df1<-subset(df,abs(y)>=3.32)#
+#
+selected.genes<-c("B2M","GAPDH","HSP90AB1","CD34","CTNNB1","HPRT1","CD33","BCR","ABL1","IGF1R","SELP","BCL2","CDK6","ATG3")#
+df2<-df[df$gene %in% selected.genes,]#
+#
+#############combined two gene sets######
+my.df<-rbind(df1,df2)#
+################save data matrix to a file#####################################
+write.table(my.df,file="Fig2f.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)#
+###############################################################################
+#
+nosig.index<-which(abs(my.df$x) < 2 & abs(my.df$y) < 2)#
+#
+pdf(file="Fig2f.pdf", width=6, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+mod <- lm(y ~ x, data = my.df)#
+newx <- seq(min(my.df$x), max(my.df$x), length.out=100)#
+preds <- predict(mod, newdata = data.frame(x=newx),interval = 'confidence')#
+#
+# plot#
+plot(my.df$x,my.df$y, type = 'n',xlab="qPCR (BCR-ABL- Vs BCR-ABL+), Log2fc",#
+		ylab="RNA-seq (BCR-ABL- Vs BCR-ABL+), Log2fc",xlim=c(-4,6),ylim=c(-4,6),#
+		main="qPCR and RNA-seq correlation")#
+points(my.df$x,my.df$y,pch=19,cex=1.2,col="brown")#
+points(my.df$x[nosig.index],my.df$y[nosig.index],pch=19,cex=1.2,col="grey")#
+abline(mod,lty=2,lwd=1.5,col="red")#
+abline(v=0,lty=2,lwd=1.5,col="grey")#
+abline(h=0,lty=2,lwd=1.5,col="grey")#
+text(my.df$x+0.2,my.df$y+0.2,labels=my.df$gene,cex=0.6)#
+text(3,-4,paste("Pearson correlation= ",format(cor(my.df$x,my.df$y),digit=3),sep=""))#
+dev.off()

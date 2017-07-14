@@ -1,0 +1,440 @@
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+library(r3Cseq)
+library(r3Cseq)#
+####################################################
+### code chunk number 3: r3Cseq.Rnw:212-214#
+####################################################
+data(Myb_prom_FL)#
+data(Myb_prom_FB)#
+####################################################
+### code chunk number 4: r3Cseq.Rnw:233-237#
+####################################################
+my3Cseq.obj<-new("r3Cseq",organismName='mm9',isControlInvolved=TRUE,#
+viewpoint_chromosome='chr10',viewpoint_primer_forward='TCTTTGTTTGATGGCATCTGTT',#
+viewpoint_primer_reverse='AAAGGGGAGGAGAAGGAGGT',expLabel="Myb_prom_FL",#
+contrLabel="MYb_prom_FB",restrictionEnzyme='HindIII')#
+####################################################
+### code chunk number 5: r3Cseq.Rnw:241-243#
+####################################################
+expRawData(my3Cseq.obj)<-exp.GRanges#
+contrRawData(my3Cseq.obj)<-contr.GRanges	#
+####################################################
+### code chunk number 6: r3Cseq.Rnw:246-247#
+####################################################
+my3Cseq.obj
+####################################################
+### code chunk number 7: r3Cseq.Rnw:252-253#
+####################################################
+getReadCountPerRestrictionFragment(my3Cseq.obj)#
+####################################################
+### code chunk number 8: r3Cseq.Rnw:261-262#
+####################################################
+calculateRPM(my3Cseq.obj)	#
+####################################################
+### code chunk number 9: r3Cseq.Rnw:266-267#
+####################################################
+getInteractions(my3Cseq.obj,fdr=0.05)
+2800-1000-600
+1200*47
+62985*0.2
+62985*0.01
+62985*0.02
+62985*0.04
+62985*0.05
+62985-65000
+62985-66000
+62985-69000
+25.73*4000
+25.73*3000
+25.73*55000
+25.73*6000
+25.73*3000
+4500-4500*0.36
+2880/12
+45000-45000*0.36
+28800/12
+430000-80000-10000-24000-50000
+663203991
+13456/57065
+11033+2770+20703+9103
+43609/57065
+24+76
+13456+11033+2770+20703+9103
+2416+1020+832+264+247+189+168+301+102+178
+62782-5717
+95239-32457
+57065/13456
+13456/57065
+47000+0.011*47000
+517/12
+43*45
+94993-67456
+22809+1553+933+695+322+239+233+283+215+69+186
+1635+2523
+4158+4992
+8275+4992+4158
+17425+8988+8729+5579+11142+11593
+17425+8988+8729+5579+11142+15593
+67456+27533
+22809+1553+933+695+322+239+233+283+215+69+186
+27537+67456
+22809+1553+933+695+322+239+233+283+215+69+186
+67456+27537
+4158+4992+8275
+8275+4992+4158
+165+110
+110/275
+478+376
+?fdr
+x<-c(0.05,0.007,0.1,1,4,5)
+p.adjust(x, method = "BH")
+0.05/5
+x<-c(0.05,0.007,0.1,1,4,5,10,0.02,12)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08,0.09,0.1,0.2)
+p.adjust(x, method = "BH")
+log2(0.01+1)
+2872-1100-600
+2958-1100-600
+31*1000000/3600000
+2890-1200-600
+71773-25000
+46773*12
+46773*12*3
+46773*12*5
+1166+34
+1166+34+76
+30000/637
+636*6
+636*10
+636*15
+636*20
+636*30
+636*40
+636*50
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+library(scone)
+library(SCONE)
+library("SCONE")
+library("scone")
+library(scone)
+biocLite("YosefLab/scone", dependencies=TRUE)
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+install.packages("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+library("scone")
+vignette("scone")
+vignette(scone)
+vignette("scone")
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+library(scRNAseq)
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scRNAseq")
+600*7.5
+600*20
+600*30
+600*50
+600*60
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+fluidigm
+head(exprs(fluidigm))
+metadata(fluidigm)$which_qc
+is_select = colData(fluidigm)$Coverage_Type == "High" #
+fluidigm = fluidigm[,is_select]#
+#
+# Retain only detected transcripts#
+fluidigm = fluidigm[which(apply(assay(fluidigm) > 0,1,any)),]
+cc <- c(brewer.pal(9, "Set1"))#
+#
+# One batch per Biological Condition#
+batch = factor(colData(fluidigm)$Biological_Condition)#
+#
+# Alignment Quality Metrics#
+qc = colData(fluidigm)[,metadata(fluidigm)$which_qc]#
+#
+# Barplot of read proportion mapping to human transcriptome#
+ralign = qc$RALIGN#
+o = order(ralign)[order(batch[order(ralign)])] # Order by batch, then value#
+#
+barplot(ralign[o], col=cc[batch][o], border=cc[batch][o], main="Percentage of reads mapped")#
+legend("bottomleft", legend=levels(batch), fill=cc,cex=0.4)
+731*7.69
+98*7.69
+95*7
+30000/95
+95*50
+95*100
+95*200
+95*300
+95*400
+95*500
+95*600
+34*3600
+34*3300
+34*3200
+5*200000
+install.package("rpython")
+install.packages("rpython")
+install.packages("rPython")
+library(genefilter)#
+library(statmod)#
+require(ggplot2)#
+library(gplots)#
+require(DESeq2)#
+library(scLVM)
+install.packages("rPython")
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("genefilter")
+install.packages("statmod")
+install.packages("rPython")
+library(rPython)
+python.exec("import sys; print sys.version")
+library(rPython)
+python.exec("import sys; print sys.version")
+system("python --version")
+95*8.8
+95*100
+5000/8
+10000/8
+10000*10
+10000*2
+10000*3
+10000*4
+10000*3
+17/24
+9.75*905
+9.75*95
+3000/10.80
+375*100
+375*50
+375*60
+375*80
+375*20
+375*50
+375*60
+375*80
+21-19.40
+1.6*5000
+2958-950-100-150-40-600
+1118*45
+1118+500
+71481*12
+71481*12*3
+71481*12*5
+48327*0.01
+48327+483
+10.80-9.60
+1.2*375
+45000/12
+library(fastICA)
+library("fastICA")
+install.packages("fastICA")
+library("fastICA")
+highway <- as.matrix(read.table("highway.dat",header=T))#
+# just to compare with our PCA and FA analyses from last time#
+#
+X <- highway[,-1]#
+#
+pc.cor <- princomp(X,cor=T)#
+#
+ica <- fastICA(X,n.comp=11)#
+names(ica)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+install.packages("devtools")
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+install_github("satijalab/seurat")
+library(devtools)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+20.8-19.40
+1.4*5000
+40-20.40
+19.6*5000
+6*5000
+98000+30000
+2890-950-200-600
+1961+232
+543+9+202+227
+1392+20+0+580+0+755+3
+766200-0.40*766200
+459720/12
+509+554+541
+1100+1193
+library("rhdf5")
+install.packages("rhdf5")
+160479-900000
+739521-160479
+65113*2
+130226+169071
+6700-2123
+34740*2
+25740+18000
+890+490
+890*2
+1780+490
+956*2
+1912*4
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9.masked")
+925*2
+958+500
+958+400
+50000*12
+50000*12*3
+430000-200000
+1098+1193
+350*12
+1970/3
+80-55
+400+397
+400+397+396
+430000/3
+430000/2
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig3c.#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| Stage_2=="diagnosis")#
+#
+my.tsne<-read.table("tSNE.8589.genes.txt",header=T)#
+my.data<-read.table("Normal_HSCs_and_Diagnosis_Cells.for.TSNE.txt",header=T)#
+#
+#################################################################################
+my.tsne$Cell<-colnames(my.data)#
+#
+my.dat<-merge(my.tsne,my.anno,by.x="Cell",by.y="Cell",all=T)#
+my.dat$my.color<-"blue"#
+my.dat$my.color[my.dat$BCR_ABL=="negative_low_gapdh"]<-"blue"#
+my.dat$my.color[my.dat$BCR_ABL=="positive"]<-"red"#
+my.dat$my.color[my.dat$BCR_ABL=="normal"]<-"black"#
+x1<-which(my.dat$my.color=="blue")#
+x2<-which(my.dat$my.color=="red")#
+x3<-which(my.dat$my.color=="black")
+400000*0.2
+697108-310000
+387108+200000
+587108-10000-50000-35000-43000-50000
+25920*0.32
+(25920+500)*0.32
+620*2
+620*2+200
+3027-2960.21
+3027-2960
+200*2*3
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate data for the GSEA analysis of Fig_3a and Fig_3b.#
+################################################################################
+################################################################################
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+################################################################################
+load(file="../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+################################################################################
+S.m<-as.matrix(my.cells)#
+################################################################################
+################################################################################
+groupA.cells<-subset(my.anno,Stage_2=="normal_hsc")#
+groupA<-as.character(groupA.cells$Cell)#
+#
+groupB.cells<-subset(my.anno,BCR_ABL=="positive" & Stage_2=="diagnosis")#
+groupB<-as.character(groupB.cells$Cell)
+length(groupA)
+length(groupB)
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate data for the GSEA analysis of Fig_3a and Fig_3b.#
+################################################################################
+################################################################################
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+################################################################################
+load(file="../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+################################################################################
+S.m<-as.matrix(my.cells)#
+################################################################################
+################################################################################
+groupA.cells<-subset(my.anno,Stage_2=="normal_hsc")#
+groupA<-as.character(groupA.cells$Cell)#
+#
+groupB.cells<-subset(my.anno,BCR_ABL=="positive" & Stage_2=="diagnosis")#
+groupB<-as.character(groupB.cells$Cell)#
+##########################Get All Data##########################################
+groupA.m<-S.m[,colnames(S.m) %in% groupA]#
+groupB.m<-S.m[,colnames(S.m) %in% groupB]#
+#
+my.phenotype.s1<-rep("Normal_HSCs",ncol(groupA.m))#
+my.phenotype.s2<-rep("Diagnosis+",ncol(groupB.m))#
+#
+my.phenotype<-c(my.phenotype.s1,my.phenotype.s2)#
+#
+my.data<-cbind(groupA.m,groupB.m)#
+#
+my.info<-data.frame(NAME=rownames(my.data))#
+my.info$DESCRIPTION<-"na"#
+#
+my.final<-cbind(my.info,my.data)#
+################################################################################
+###############################################################################
+h1<-paste(ncol(my.data),"2","1",sep=" ")#
+h2<-paste("#","Normal_HSCs","Diagnosis+",sep=" ")#
+h3<-paste(c(rep("Normal_HSCs",length(groupA)),rep("Diagnosis+",length(groupB)),sep=" "))#
+#
+cat(h1,file=paste("NormalHSCs-Diagnosis+_GSEA-phenotype",".cls",sep=""),sep="\n")#
+cat(h2,file=paste("NormalHSCs-Diagnosis+_GSEA-phenotype",".cls",sep=""),sep="\n",append=TRUE)#
+cat(h3,file=paste("NormalHSCs-Diagnosis+_GSEA-phenotype",".cls",sep=""),append=TRUE)#
+#
+write.table(my.final,file="NormalHSCs-Diagnosis+_GSEA.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)

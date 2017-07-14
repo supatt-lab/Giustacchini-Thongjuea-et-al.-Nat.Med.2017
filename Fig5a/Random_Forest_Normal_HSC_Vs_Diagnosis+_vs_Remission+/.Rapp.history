@@ -1,0 +1,870 @@
+install.packages("rPython")
+library(genefilter)#
+library(statmod)#
+require(ggplot2)#
+library(gplots)#
+require(DESeq2)#
+library(scLVM)
+install.packages("rPython")
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("genefilter")
+install.packages("statmod")
+install.packages("rPython")
+library(rPython)
+python.exec("import sys; print sys.version")
+library(rPython)
+python.exec("import sys; print sys.version")
+system("python --version")
+95*8.8
+95*100
+5000/8
+10000/8
+10000*10
+10000*2
+10000*3
+10000*4
+10000*3
+17/24
+9.75*905
+9.75*95
+3000/10.80
+375*100
+375*50
+375*60
+375*80
+375*20
+375*50
+375*60
+375*80
+21-19.40
+1.6*5000
+2958-950-100-150-40-600
+1118*45
+1118+500
+71481*12
+71481*12*3
+71481*12*5
+48327*0.01
+48327+483
+10.80-9.60
+1.2*375
+45000/12
+library(fastICA)
+library("fastICA")
+install.packages("fastICA")
+library("fastICA")
+highway <- as.matrix(read.table("highway.dat",header=T))#
+# just to compare with our PCA and FA analyses from last time#
+#
+X <- highway[,-1]#
+#
+pc.cor <- princomp(X,cor=T)#
+#
+ica <- fastICA(X,n.comp=11)#
+names(ica)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+install.packages("devtools")
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+install_github("satijalab/seurat")
+library(devtools)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+20.8-19.40
+1.4*5000
+40-20.40
+19.6*5000
+6*5000
+98000+30000
+2890-950-200-600
+1961+232
+543+9+202+227
+1392+20+0+580+0+755+3
+766200-0.40*766200
+459720/12
+509+554+541
+1100+1193
+library("rhdf5")
+install.packages("rhdf5")
+160479-900000
+739521-160479
+65113*2
+130226+169071
+6700-2123
+34740*2
+25740+18000
+890+490
+890*2
+1780+490
+956*2
+1912*4
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9.masked")
+925*2
+958+500
+958+400
+50000*12
+50000*12*3
+430000-200000
+1098+1193
+350*12
+1970/3
+80-55
+400+397
+400+397+396
+430000/3
+430000/2
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig3c.#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| Stage_2=="diagnosis")#
+#
+my.tsne<-read.table("tSNE.8589.genes.txt",header=T)#
+my.data<-read.table("Normal_HSCs_and_Diagnosis_Cells.for.TSNE.txt",header=T)#
+#
+#################################################################################
+my.tsne$Cell<-colnames(my.data)#
+#
+my.dat<-merge(my.tsne,my.anno,by.x="Cell",by.y="Cell",all=T)#
+my.dat$my.color<-"blue"#
+my.dat$my.color[my.dat$BCR_ABL=="negative_low_gapdh"]<-"blue"#
+my.dat$my.color[my.dat$BCR_ABL=="positive"]<-"red"#
+my.dat$my.color[my.dat$BCR_ABL=="normal"]<-"black"#
+x1<-which(my.dat$my.color=="blue")#
+x2<-which(my.dat$my.color=="red")#
+x3<-which(my.dat$my.color=="black")
+400000*0.2
+697108-310000
+387108+200000
+587108-10000-50000-35000-43000-50000
+25920*0.32
+(25920+500)*0.32
+620*2
+620*2+200
+3027-2960.21
+3027-2960
+200*2*3
+250*4
+604388-120000
+604388-120000-350000
+134388+200000
+17/40
+(17/40)*100
+604388-118400
+485988-350000
+604388-118400
+604388-118400-320000
+604388-118400-320000-30000
+135988+200000
+463003-350000
+0.3125*200000
+468203-315000
+468203-315000-72000
+200000*0.3125
+125*4
+11856/6
+125*4
+468203-72000
+468203-72000-330000
+18/24
+0.3090*200000
+0.3120*200000
+35000*12
+35000*12*5
+0.3075*200000
+500000/70
+1937-2016
+1941-2016
+787*2
+1560*2
+787*2
+54318+53442
+804*2+787*2
+33520-2090
+33520/12
+.3090*200000
+6874+7023+7023+6874
+0.3070*200000
+2112468/12
+669+374
+4037-1043
+33520/12
+2793-2090
+703/2793
+25*4000
+0.25*4000
+60000/44.1
+100000/44.1
+35714*30
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+48327/12
+1205/12
+120+19+630+100
+120+19+630+500
+1269-2900
+500000/25
+500000/(25*12)
+300000/(25*12)
+409+248+2924
+library(scater)#
+library(SC3)#
+treutlein[1:3, 1:3]
+ann <- data.frame(cell_type1 = colnames(treutlein))#
+pd <- new("AnnotatedDataFrame", data = ann)#
+# cell expression#
+tmp <- treutlein#
+colnames(tmp) <- rownames(ann)#
+# SCESEt object#
+sceset <- newSCESet(fpkmData = tmp, phenoData = pd, logExprsOffset = 1)
+sceset
+sceset <- calculateQCMetrics(sceset)
+plotPCA(sceset, colour_by = "cell_type1")
+sceset <- sc3(sceset, ks = 2:4, biology = TRUE, n_cores = 1)
+sceset
+sc3_plot_consensus(sceset, k = 3)
+sc3_consensus()
+1262*3
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.16.tgz", binary = TRUE)#
+library(Seurat)
+library(Seurat)
+library(GSE5859Subset)#
+data(GSE5859Subset)
+library(limma)
+?RemoveBatchEffect
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+exit
+8700+4700
+1529-640
+889-400
+400*45
+889-500
+500-45
+500*45
+889-400
+75000/12
+6250-0.36*6250
+library(Seurat)
+Read10X
+showMethod(Read10X)
+showMethod('Read10X')
+showMethod("Read10X")
+class(Seurat)
+showMethods("Read10X")
+methods("Read10X")
+getAnywhere(Read10X)
+showMethods(Read10X)
+getMethod("Read10X")
+##############################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate data for the tSNE analysis.##################
+library(limma)#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="diagnosis" & (BCR_ABL=="negative" | BCR_ABL=="negative_low_gapdh"))#
+################################################################################
+load(file="../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################remove batches effect##########################
+my_responder<-as.character(my.anno$Responder)#
+my_responder[is.na(my_responder)==TRUE]<-"unknown"#
+#
+my_responder<-as.factor(my_responder)#
+#
+my.design<-model.matrix(~my_responder)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch5")]<-"B"#
+batch.x[which(batch.x=="batch6")]<-"C"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)
+nrow(S.m.no.batch)
+ncol(S.m.no.batch)
+load(file="Diagnosis.Neg.HSC.highVariable.Genes.rdata")#
+#
+my.genes<-Diagnosis.Neg.HSC.highVariable.Genes#
+###############################################################################	#
+S.m2<-subset(S.m.no.batch,rownames(S.m.no.batch) %in% my.genes)#
+################################################################################
+################################################################################
+write.table(S.m2,file="Diagnosis_BCR_ABL-_5611_Genes.for_tSNE.txt",append=FALSE, #
+		sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+##############################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate data for the tSNE analysis.##################
+library(limma)#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="diagnosis" & (BCR_ABL=="negative" | BCR_ABL=="negative_low_gapdh"))#
+################################################################################
+load(file="../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################remove batches effect##########################
+my_responder<-as.character(my.anno$Responder)#
+my_responder[is.na(my_responder)==TRUE]<-"unknown"#
+#
+my_responder<-as.factor(my_responder)#
+#
+my.design<-model.matrix(~my_responder)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch5")]<-"B"#
+batch.x[which(batch.x=="batch6")]<-"C"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)#
+###############################################################################
+load(file="Diagnosis.Neg.HSC.highVariable.Genes.rdata")#
+#
+my.genes<-Diagnosis.Neg.HSC.highVariable.Genes#
+###############################################################################	#
+S.m2<-subset(S.m.no.batch,rownames(S.m.no.batch) %in% my.genes)#
+################################################################################
+################################################################################
+write.table(S.m2,file="Diagnosis_BCR_ABL-_5611_Genes.for_tSNE.txt",append=FALSE, #
+		sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig4a.#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="diagnosis" & (BCR_ABL=="negative" | BCR_ABL=="negative_low_gapdh"))#
+#
+my.tsne<-read.table("tSNE.5611.genes.perplexity20.txt",header=T)#
+my.data<-read.table("Diagnosis_BCR_ABL-_5611_Genes.for_tSNE.txt",header=T)
+my.tsne$Cell<-colnames(my.data)#
+#
+my.dat<-merge(my.tsne,my.anno,by.x="Cell",by.y="Cell",all=T)#
+#
+my.dat<-subset(my.dat,Responder=="good" | Responder=="poor")#
+#
+my.dat$my.color<-"red"#
+my.dat$my.color[my.dat$Responder=="good"]<-"blue"#
+#
+################save data matrix to a file################
+write.table(my.dat[c("Cell","Dim1","Dim2","BCR_ABL","Responder","Patient")],file="Fig4a.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)#
+##########################################################
+pdf(file="Fig4b.pdf", width=7, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+plot(my.dat$Dim1,my.dat$Dim2,#
+		xlab = "Using 5,611 variable genes",#
+		ylab = "",#
+		main="356 Diagnosis (BCR-ABL-) cells",col = my.dat$my.color,cex=1.5,pch=19,yaxt='n',xaxt='n')#
+#
+legend("topright",c("Poor responder","Good responder"),col=c("red","blue"),pch=c(19),cex=0.9)#
+################################################################################
+dev.off()
+nrow(my.anno)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig4a.#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="diagnosis" & (BCR_ABL=="negative" | BCR_ABL=="negative_low_gapdh")
+)
+table(my.anno$responder)
+table(my.anno$Responder)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig4a.#
+################################################################################
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="diagnosis" & (BCR_ABL=="negative" | BCR_ABL=="negative_low_gapdh"))#
+#
+my.tsne<-read.table("tSNE.5611.genes.perplexity20.txt",header=T)#
+my.data<-read.table("Diagnosis_BCR_ABL-_5611_Genes.for_tSNE.txt",header=T)#
+#
+#################################################################################
+my.tsne$Cell<-colnames(my.data)#
+#
+my.dat<-merge(my.tsne,my.anno,by.x="Cell",by.y="Cell",all=T)#
+#
+my.dat<-subset(my.dat,Responder=="good" | Responder=="poor")#
+#
+my.dat$my.color<-"red"#
+my.dat$my.color[my.dat$Responder=="good"]<-"blue"
+nrow(my.dat)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig4d.#
+################################################################################
+CML_A<-read.delim("GSEA-SUMMARY/gsea_report_for_good_vs_poor_diagnosis_BCR_ABL-.txt",header=T,stringsAsFactors=F)#
+CML_B<-read.delim("GSEA-SUMMARY/gsea_report_for_good_vs_poor_diagnosis_BCR_ABL+.txt",header=T,stringsAsFactors=F)#
+################################################################################
+CML_A<-CML_A[c("NAME","FDR_q.val","Enriched_In")]#
+colnames(CML_A)<-c("NAME","FDR_CML_A","CML_A_Enriched_In")#
+CML_A$CML_A_Enriched_In<-paste(CML_A$CML_A_Enriched_In,format(CML_A$FDR_CML_A,digits=2),sep=" ")#
+CML_B<-CML_B[c("NAME","FDR_q.val","Enriched_In")]#
+colnames(CML_B)<-c("NAME","FDR_CML_B","CML_B_Enriched_In")#
+CML_B$CML_B_Enriched_In<-paste(CML_B$CML_B_Enriched_In,format(CML_B$FDR_CML_B,digits=2),sep=" ")#
+################################################################################
+################################################################################
+m<-merge(CML_A,CML_B,all=T)#
+################################################################################
+info1<-subset(m,FDR_CML_A < 0.25 | FDR_CML_B < 0.25)#
+################################################################################
+r.names<-c("HALLMARK_APICAL_JUNCTION","HALLMARK_ALLOGRAFT_REJECTION","HALLMARK_UV_RESPONSE_UP","HALLMARK_UV_RESPONSE_DN",#
+		"HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION","HALLMARK_COAGULATION","HALLMARK_ESTROGEN_RESPONSE_LATE","HALLMARK_ESTROGEN_RESPONSE_EARLY",#
+		"HALLMARK_COMPLEMENT","HALLMARK_MYOGENESIS","HALLMARK_BILE_ACID_METABOLISM")#
+r.index<-which(info1$NAME %in% r.names)#
+info1<-info1[-c(r.index),]#
+#
+info.x<-info1[c("FDR_CML_A","FDR_CML_B")]#
+rownames(info.x)<-info1$NAME#
+colnames(info.x)<-c("BCR-ABL- (diagnosis)","BCR-ABL+ (diagnosis)")#
+#
+info.y<-info1[c("CML_A_Enriched_In","CML_B_Enriched_In")]#
+rownames(info.y)<-info1$NAME#
+my.info<-as.matrix(info.y)#
+#
+info2<- -log10(info.x+0.00001)#
+info2[info2 < 0]<-0#
+info2[is.na(info2)==T]<-0#
+#############Clustering###################################
+m.m<-as.matrix(info2)#
+m.m<-as.data.frame(m.m)#
+#
+m.y<-as.matrix(info.y)#
+m.y<-as.data.frame(m.y)#
+##########################################################
+my.pathways<-read.table("Pathways.txt",header=T)#
+#
+my.data.m<-data.frame()#
+for(i in 1:nrow(my.pathways)){#
+	pathway<-as.character(my.pathways$Pathway[i])#
+	my.x<-m.m[rownames(m.m)==pathway,]#
+	my.data.m<-rbind(my.data.m,my.x)#
+}#
+my.data.y<-data.frame()#
+for(i in 1:nrow(my.pathways)){#
+	pathway<-as.character(my.pathways$Pathway[i])#
+	my.y<-m.y[rownames(m.y)==pathway,]#
+	my.data.y<-rbind(my.data.y,my.y)#
+}#
+##########################################################
+##########################################################
+m.m<-as.matrix(my.data.m)#
+info.y<-as.matrix(my.data.y)#
+################save data matrix to a file################
+write.table(m.m,file="Fig4d.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=TRUE)#
+#
+write.table(info.y,file="Fig4d.enrichment_status_and_pvalues_data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=FALSE)#
+##########################################################
+library("gplots")#
+library(RColorBrewer)#
+#
+pdf(file="Fig4d-v2-FINAL.pdf", width=8, height=8, onefile=T, bg="transparent",family = "Helvetica",fonts = NULL)#
+#
+heatmap.2(m.m,Colv=F,Rowv=F, dendrogram="none",cellnote=info.y,col=colorRampPalette(rev(brewer.pal(n = 9, name = "RdYlBu")))(100),#
+		scale="none",key=TRUE,symkey=FALSE,keysize = 1, density.info="none", trace="none",cexRow=0.80,cexCol=0.70,#
+		notecex=0.80,#
+		sepcolor="white",#
+		sepwidth=c(0.01,0.1),#
+		notecol="black",margins = c(10,25),main ="")#
+dev.off()
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used to generate Fig4d.#
+################################################################################
+CML_A<-read.delim("GSEA-SUMMARY/gsea_report_for_good_vs_poor_diagnosis_BCR_ABL-.txt",header=T,stringsAsFactors=F)#
+CML_B<-read.delim("GSEA-SUMMARY/gsea_report_for_good_vs_poor_diagnosis_BCR_ABL+.txt",header=T,stringsAsFactors=F)#
+################################################################################
+CML_A<-CML_A[c("NAME","FDR_q.val","Enriched_In")]#
+colnames(CML_A)<-c("NAME","FDR_CML_A","CML_A_Enriched_In")#
+CML_A$CML_A_Enriched_In<-paste(CML_A$CML_A_Enriched_In,format(CML_A$FDR_CML_A,digits=2),sep=" ")#
+CML_B<-CML_B[c("NAME","FDR_q.val","Enriched_In")]#
+colnames(CML_B)<-c("NAME","FDR_CML_B","CML_B_Enriched_In")#
+CML_B$CML_B_Enriched_In<-paste(CML_B$CML_B_Enriched_In,format(CML_B$FDR_CML_B,digits=2),sep=" ")#
+################################################################################
+################################################################################
+m<-merge(CML_A,CML_B,all=T)#
+################################################################################
+info1<-subset(m,FDR_CML_A < 0.25 | FDR_CML_B < 0.25)#
+################################################################################
+r.names<-c("HALLMARK_APICAL_JUNCTION","HALLMARK_ALLOGRAFT_REJECTION","HALLMARK_UV_RESPONSE_UP","HALLMARK_UV_RESPONSE_DN",#
+		"HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION","HALLMARK_COAGULATION","HALLMARK_ESTROGEN_RESPONSE_LATE","HALLMARK_ESTROGEN_RESPONSE_EARLY",#
+		"HALLMARK_COMPLEMENT","HALLMARK_MYOGENESIS","HALLMARK_BILE_ACID_METABOLISM")#
+r.index<-which(info1$NAME %in% r.names)#
+info1<-info1[-c(r.index),]#
+#
+info.x<-info1[c("FDR_CML_A","FDR_CML_B")]#
+rownames(info.x)<-info1$NAME#
+colnames(info.x)<-c("BCR-ABL- (diagnosis)","BCR-ABL+ (diagnosis)")#
+#
+info.y<-info1[c("CML_A_Enriched_In","CML_B_Enriched_In")]#
+rownames(info.y)<-info1$NAME#
+my.info<-as.matrix(info.y)#
+#
+info2<- -log10(info.x+0.00001)#
+info2[info2 < 0]<-0#
+info2[is.na(info2)==T]<-0#
+#############Clustering###################################
+m.m<-as.matrix(info2)#
+m.m<-as.data.frame(m.m)#
+#
+m.y<-as.matrix(info.y)#
+m.y<-as.data.frame(m.y)#
+##########################################################
+my.pathways<-read.table("Pathways.txt",header=T)#
+#
+my.data.m<-data.frame()#
+for(i in 1:nrow(my.pathways)){#
+	pathway<-as.character(my.pathways$Pathway[i])#
+	my.x<-m.m[rownames(m.m)==pathway,]#
+	my.data.m<-rbind(my.data.m,my.x)#
+}#
+my.data.y<-data.frame()#
+for(i in 1:nrow(my.pathways)){#
+	pathway<-as.character(my.pathways$Pathway[i])#
+	my.y<-m.y[rownames(m.y)==pathway,]#
+	my.data.y<-rbind(my.data.y,my.y)#
+}#
+##########################################################
+##########################################################
+m.m<-as.matrix(my.data.m)#
+info.y<-as.matrix(my.data.y)#
+################save data matrix to a file################
+write.table(m.m,file="Fig4e.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=TRUE)#
+#
+write.table(info.y,file="Fig4e.enrichment_status_and_pvalues_data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=FALSE)#
+##########################################################
+library("gplots")#
+library(RColorBrewer)#
+#
+pdf(file="Fig4e.pdf", width=8, height=8, onefile=T, bg="transparent",family = "Helvetica",fonts = NULL)#
+#
+heatmap.2(m.m,Colv=F,Rowv=F, dendrogram="none",cellnote=info.y,col=colorRampPalette(rev(brewer.pal(n = 9, name = "RdYlBu")))(100),#
+		scale="none",key=TRUE,symkey=FALSE,keysize = 1, density.info="none", trace="none",cexRow=0.80,cexCol=0.70,#
+		notecex=0.80,#
+		sepcolor="white",#
+		sepwidth=c(0.01,0.1),#
+		notecol="black",margins = c(10,25),main ="")#
+dev.off()
+load("/Users/supat/workspace/Adam-SmartSeq2-CML-ALL/CODES_TO_GENERATE_FIGURES/Data/Single_cell_HSCs.expression.RPKM.table.rdata")
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used for the Random forests analysis.#
+################################################################################
+library(matrixStats)#
+library(cluster)#
+library(RColorBrewer)#
+library(pheatmap)#
+library(Rtsne)#
+library(limma)#
+library(randomForest)#
+#
+my.anno<-read.delim("../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| (Stage_2=="diagnosis" & BCR_ABL=="positive")#
+											 | (Stage_2=="remission" & BCR_ABL=="positive"))#
+################################################################################
+load(file="../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################With Batch effect##############################
+my_bcr_abl<-as.character(my.anno$Stage_2)#
+#
+my_bcr_abl<-as.factor(my_bcr_abl)#
+my.design<-model.matrix(~my_bcr_abl)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch3")]<-"B"#
+batch.x[which(batch.x=="batch5")]<-"C"#
+batch.x[which(batch.x=="batch6")]<-"D"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)#
+############################################################################################
+############################################################################################
+########The following genes are the top 500 important genes for each round of the RF analysis##
+########in 3 ways comparison:#
+########1) Normal Vs Diagnosis+#
+########2) Normal Vs Remission+#
+########3) Diagnosis+ Vs Remission+#
+############################################################################################
+load(file="RF.genes.rdata")#
+load(file="RF.genes.diagnosis.remission.rdata")#
+load(file="RF.genes.normal.remission.rdata")#
+###########All Genes
+###############################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used for the Random forests analysis.#
+################################################################################
+library(matrixStats)#
+library(cluster)#
+library(RColorBrewer)#
+library(pheatmap)#
+library(Rtsne)#
+library(limma)#
+library(randomForest)#
+#
+my.anno<-read.delim("../../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| (Stage_2=="diagnosis" & BCR_ABL=="positive")#
+											 | (Stage_2=="remission" & BCR_ABL=="positive"))#
+################################################################################
+load(file="../../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################With Batch effect##############################
+my_bcr_abl<-as.character(my.anno$Stage_2)#
+#
+my_bcr_abl<-as.factor(my_bcr_abl)#
+my.design<-model.matrix(~my_bcr_abl)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch3")]<-"B"#
+batch.x[which(batch.x=="batch5")]<-"C"#
+batch.x[which(batch.x=="batch6")]<-"D"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)
+nrow(S.m.no.batch)
+############################################################################################
+############################################################################################
+########The following genes are the top 500 important genes for each round of the RF analysis##
+########in 3 ways comparison:#
+########1) Normal Vs Diagnosis+#
+########2) Normal Vs Remission+#
+########3) Diagnosis+ Vs Remission+#
+############################################################################################
+load(file="RF.genes.rdata")#
+load(file="RF.genes.diagnosis.remission.rdata")#
+load(file="RF.genes.normal.remission.rdata")#
+###########All Genes########################################################################
+my.all.genes<-c(my.genes,my.genes.diagnosis.remission,my.genes.normal.remission)#
+my.genes<-unique(my.all.genes)
+nrow(my.genes)
+my.genes
+length(my.genes)
+length(my.genes)
+RF.genes
+head(RF.genes)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used for the Random forests analysis.#
+################################################################################
+library(matrixStats)#
+library(cluster)#
+library(RColorBrewer)#
+library(pheatmap)#
+library(Rtsne)#
+library(limma)#
+library(randomForest)#
+#
+my.anno<-read.delim("../../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| (Stage_2=="diagnosis" & BCR_ABL=="positive")#
+											 | (Stage_2=="remission" & BCR_ABL=="positive"))#
+################################################################################
+load(file="../../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################With Batch effect##############################
+my_bcr_abl<-as.character(my.anno$Stage_2)#
+#
+my_bcr_abl<-as.factor(my_bcr_abl)#
+my.design<-model.matrix(~my_bcr_abl)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch3")]<-"B"#
+batch.x[which(batch.x=="batch5")]<-"C"#
+batch.x[which(batch.x=="batch6")]<-"D"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)#
+############################################################################################
+############################################################################################
+########The following genes are the top 500 important genes for each round of the RF analysis##
+########in 3 ways comparison:#
+########1) Normal Vs Diagnosis+#
+########2) Normal Vs Remission+#
+########3) Diagnosis+ Vs Remission+#
+############################################################################################
+load(file="RF.genes.rdata")#
+load(file="RF.genes.diagnosis.remission.rdata")#
+load(file="RF.genes.normal.remission.rdata")
+ls()
+legnth(my.genes)
+length(my.genes)
+length(my.genes.diagnosis.remission)
+length(my.genes.normal.remission)
+################################################################################
+#Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, UK #
+#Contact email : supat.thongjuea@ndcls.ox.ac.uk or supat.thongjuea@gmail.com#
+#Maintainer: Supat Thongjuea and Alice Giustacchini#
+#Title: Single-cell Transcriptomics Uncovers Distinct and Clinically Predictive Molecular Signatures of Stem Cells in Chronic Myeloid Leukemia#
+#Journal : Nature Medicine#
+#Year : 2017#
+################################################################################
+#This R script is used for the Random forests analysis.#
+################################################################################
+library(matrixStats)#
+library(cluster)#
+library(RColorBrewer)#
+library(pheatmap)#
+library(Rtsne)#
+library(limma)#
+library(randomForest)#
+#
+my.anno<-read.delim("../../Data/CML_PROJECT_ALL_CELLs.Freezed-5.anno.txt",header=T)#
+my.anno<-subset(my.anno,used4analysis==1)#
+my.anno<-subset(my.anno,Stage_2=="normal_hsc"| (Stage_2=="diagnosis" & BCR_ABL=="positive")#
+											 | (Stage_2=="remission" & BCR_ABL=="positive"))#
+################################################################################
+load(file="../../Data/CML_PROJECT_ALL_CELLs.rdata")#
+my.cells<-CML_PROJECT_ALL_CELLs[,as.character(my.anno$Cell)]#
+################################################################################
+min_expr<-1#
+S.m<-as.matrix(my.cells)#
+S.m[S.m < min_expr]<- 0#
+S.m[S.m >= min_expr]<-log2(S.m[S.m >= min_expr])#
+#################################With Batch effect##############################
+my_bcr_abl<-as.character(my.anno$Stage_2)#
+#
+my_bcr_abl<-as.factor(my_bcr_abl)#
+my.design<-model.matrix(~my_bcr_abl)#
+rownames(my.design)<-colnames(S.m)#
+#
+batch.x<-as.character(my.anno$process_date)#
+batch.x[which(batch.x=="batch1" | batch.x=="batch2")]<-"A"#
+batch.x[which(batch.x=="batch3")]<-"B"#
+batch.x[which(batch.x=="batch5")]<-"C"#
+batch.x[which(batch.x=="batch6")]<-"D"#
+#
+S.m.no.batch = removeBatchEffect(S.m,batch=batch.x,design=my.design)#
+############################################################################################
+############################################################################################
+########The following genes are the top important genes for each round of the RF analysis#
+########in 3 ways comparison:#
+########1) Normal Vs Diagnosis+#
+########2) Diagnosis+ Vs Remission+#
+########3) Normal Vs Remission+#
+########Genes are selected based on the cut off criteria :"mean(my.importance.f$MeanDecreaseGini)+sd(my.importance.f$MeanDecreaseGini)"#
+############################################################################################
+load(file="RF.genes.rdata")#
+load(file="RF.genes.diagnosis.remission.rdata")#
+load(file="RF.genes.normal.remission.rdata")#
+###########All Genes########################################################################
+my.all.genes<-c(my.genes,my.genes.diagnosis.remission,my.genes.normal.remission)#
+my.genes<-unique(my.all.genes)#
+################################
+S.m.no.batch<-S.m.no.batch[rownames(S.m.no.batch) %in% my.genes,]#
+#########Run Random forrest#################################################################
+group<-my_bcr_abl

@@ -1,0 +1,1156 @@
+62985-69000
+25.73*4000
+25.73*3000
+25.73*55000
+25.73*6000
+25.73*3000
+4500-4500*0.36
+2880/12
+45000-45000*0.36
+28800/12
+430000-80000-10000-24000-50000
+663203991
+13456/57065
+11033+2770+20703+9103
+43609/57065
+24+76
+13456+11033+2770+20703+9103
+2416+1020+832+264+247+189+168+301+102+178
+62782-5717
+95239-32457
+57065/13456
+13456/57065
+47000+0.011*47000
+517/12
+43*45
+94993-67456
+22809+1553+933+695+322+239+233+283+215+69+186
+1635+2523
+4158+4992
+8275+4992+4158
+17425+8988+8729+5579+11142+11593
+17425+8988+8729+5579+11142+15593
+67456+27533
+22809+1553+933+695+322+239+233+283+215+69+186
+27537+67456
+22809+1553+933+695+322+239+233+283+215+69+186
+67456+27537
+4158+4992+8275
+8275+4992+4158
+165+110
+110/275
+478+376
+?fdr
+x<-c(0.05,0.007,0.1,1,4,5)
+p.adjust(x, method = "BH")
+0.05/5
+x<-c(0.05,0.007,0.1,1,4,5,10,0.02,12)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08)
+p.adjust(x, method = "BH")
+x<-c(0.05,0.05,0.02,0.04,0.08,0.09,0.1,0.2)
+p.adjust(x, method = "BH")
+log2(0.01+1)
+2872-1100-600
+2958-1100-600
+31*1000000/3600000
+2890-1200-600
+71773-25000
+46773*12
+46773*12*3
+46773*12*5
+1166+34
+1166+34+76
+30000/637
+636*6
+636*10
+636*15
+636*20
+636*30
+636*40
+636*50
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+library(scone)
+library(SCONE)
+library("SCONE")
+library("scone")
+library(scone)
+biocLite("YosefLab/scone", dependencies=TRUE)
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("devtools")#
+biocLite("YosefLab/scone", dependencies=TRUE)
+install.packages("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scran")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("r3Cseq")
+library("scone")
+vignette("scone")
+vignette(scone)
+vignette("scone")
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+library(scRNAseq)
+source("https://bioconductor.org/biocLite.R")#
+biocLite("scRNAseq")
+600*7.5
+600*20
+600*30
+600*50
+600*60
+library(scRNAseq)#
+#
+## ----- Load Example Data -----#
+data(fluidigm)#
+assay(fluidigm) = assays(fluidigm)$rsem_counts # Set assay to RSEM estimated counts
+fluidigm
+head(exprs(fluidigm))
+metadata(fluidigm)$which_qc
+is_select = colData(fluidigm)$Coverage_Type == "High" #
+fluidigm = fluidigm[,is_select]#
+#
+# Retain only detected transcripts#
+fluidigm = fluidigm[which(apply(assay(fluidigm) > 0,1,any)),]
+cc <- c(brewer.pal(9, "Set1"))#
+#
+# One batch per Biological Condition#
+batch = factor(colData(fluidigm)$Biological_Condition)#
+#
+# Alignment Quality Metrics#
+qc = colData(fluidigm)[,metadata(fluidigm)$which_qc]#
+#
+# Barplot of read proportion mapping to human transcriptome#
+ralign = qc$RALIGN#
+o = order(ralign)[order(batch[order(ralign)])] # Order by batch, then value#
+#
+barplot(ralign[o], col=cc[batch][o], border=cc[batch][o], main="Percentage of reads mapped")#
+legend("bottomleft", legend=levels(batch), fill=cc,cex=0.4)
+731*7.69
+98*7.69
+95*7
+30000/95
+95*50
+95*100
+95*200
+95*300
+95*400
+95*500
+95*600
+34*3600
+34*3300
+34*3200
+5*200000
+install.package("rpython")
+install.packages("rpython")
+install.packages("rPython")
+library(genefilter)#
+library(statmod)#
+require(ggplot2)#
+library(gplots)#
+require(DESeq2)#
+library(scLVM)
+install.packages("rPython")
+source("https://bioconductor.org/biocLite.R")#
+biocLite()
+source("https://bioconductor.org/biocLite.R")#
+biocLite("genefilter")
+install.packages("statmod")
+install.packages("rPython")
+library(rPython)
+python.exec("import sys; print sys.version")
+library(rPython)
+python.exec("import sys; print sys.version")
+system("python --version")
+95*8.8
+95*100
+5000/8
+10000/8
+10000*10
+10000*2
+10000*3
+10000*4
+10000*3
+17/24
+9.75*905
+9.75*95
+3000/10.80
+375*100
+375*50
+375*60
+375*80
+375*20
+375*50
+375*60
+375*80
+21-19.40
+1.6*5000
+2958-950-100-150-40-600
+1118*45
+1118+500
+71481*12
+71481*12*3
+71481*12*5
+48327*0.01
+48327+483
+10.80-9.60
+1.2*375
+45000/12
+library(fastICA)
+library("fastICA")
+install.packages("fastICA")
+library("fastICA")
+highway <- as.matrix(read.table("highway.dat",header=T))#
+# just to compare with our PCA and FA analyses from last time#
+#
+X <- highway[,-1]#
+#
+pc.cor <- princomp(X,cor=T)#
+#
+ica <- fastICA(X,n.comp=11)#
+names(ica)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+install.packages("devtools")
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+install_github("satijalab/seurat")
+library(devtools)
+install_url("https://github.com/satijalab/seurat/releases/download/v1.4.0/Seurat_1.4.0.8.tgz", binary = TRUE)#
+library(Seurat)
+library(devtools)
+20.8-19.40
+1.4*5000
+40-20.40
+19.6*5000
+6*5000
+98000+30000
+2890-950-200-600
+1961+232
+543+9+202+227
+1392+20+0+580+0+755+3
+766200-0.40*766200
+459720/12
+509+554+541
+1100+1193
+library("rhdf5")
+install.packages("rhdf5")
+160479-900000
+739521-160479
+65113*2
+130226+169071
+6700-2123
+34740*2
+25740+18000
+890+490
+890*2
+1780+490
+956*2
+1912*4
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("BSgenome.Mmusculus.UCSC.mm9.masked")
+925*2
+958+500
+958+400
+50000*12
+50000*12*3
+430000-200000
+1098+1193
+350*12
+1970/3
+80-55
+400+397
+400+397+396
+430000/3
+430000/2
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(Hmisc)
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")
+my.genes<-c("CLU","FCER1A","GAS2","MZB1","RGS2","CXCR4")#
+#
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv","NBM91.csv"),#
+		chip_names=c("plate1","plate2","normal_hsc"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+###############################################################
+############Hierachical Clustering Analysis####################
+my.expr<-my.obj@org.data#
+my.expr$delta.ct[is.na(my.expr$raw_ct)==T]<-0
+my.expr
+head(my.expr)
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.dat$BCR_ABL_status[my.dat$chip=="normal_hsc"]<-"normal_hsc"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+#
+groupC.anno<-subset(my.cell.anno,BCR_ABL_status=="normal_hsc")#
+groupC.cells<-rownames(groupC.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+groupC.m<-x.m[,colnames(x.m) %in% groupC.cells]#
+###############################################################
+pdf(file="Fig2h.pdf", width=12, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+par(mfrow=c(2,6),mar=c(4,4,2,2),oma = c(2, 2, 1, 1))#
+for(i in 1:length(my.genes)){#
+	my.gene<-my.genes[i]#
+	my.groupA.m<-groupA.m[which(rownames(groupA.m) %in% my.gene),]#
+	my.groupA.sd<-sd(my.groupA.m)#
+	my.groupA.exp<-my.groupA.m[my.groupA.m !=0]#
+	my.groupA.mean2<-mean(my.groupA.exp)#
+	my.groupA.sd2<-sd(my.groupA.exp)#
+	my.groupB.m<-groupB.m[which(rownames(groupB.m) %in% my.gene),]#
+	my.groupB.sd<-sd(my.groupB.m)#
+	my.groupB.exp<-my.groupB.m[my.groupB.m !=0]#
+	my.groupB.mean2<-mean(my.groupB.exp)#
+	my.groupB.sd2<-sd(my.groupB.exp)#
+	my.groupC.m<-groupC.m[which(rownames(groupC.m) %in% my.gene),]#
+	my.groupC.sd<-sd(my.groupC.m)#
+	my.groupC.exp<-my.groupC.m[my.groupC.m !=0]#
+	my.groupC.mean2<-mean(my.groupC.exp)#
+	my.groupC.sd2<-sd(my.groupC.exp)#
+	min.value<-min(my.groupA.m,my.groupB.m,my.groupC.m)#
+	my.groupA.m[my.groupA.m==0]<-min.value-3.5#
+	my.groupB.m[my.groupB.m==0]<-min.value-3.5#
+	my.groupC.m[my.groupC.m==0]<-min.value-3.5#
+	##################Get present/total###############
+	A.present<-length(my.groupA.m[my.groupA.m > min.value-3.5])#
+	A.total<-length(my.groupA.m)#
+	B.present<-length(my.groupB.m[my.groupB.m > min.value-3.5])#
+	B.total<-length(my.groupB.m)#
+	C.present<-length(my.groupC.m[my.groupC.m > min.value-3.5])#
+	C.total<-length(my.groupC.m)#
+	##################################################
+	text.A<-paste(A.present,A.total,sep="/")#
+	text.B<-paste(B.present,B.total,sep="/")#
+	text.C<-paste(C.present,C.total,sep="/")#
+	my.text<-c(text.A,text.B,text.C)#
+	my.medianA<-median(my.groupA.m)#
+	my.medianB<-median(my.groupB.m)#
+	my.medianC<-median(my.groupC.m)#
+	my.meanA<-mean(my.groupA.m)#
+	my.meanB<-mean(my.groupB.m)#
+	my.meanC<-mean(my.groupC.m)#
+	my.list<-list()#
+	my.list[["BCR-ABL-"]]<- my.groupA.m#
+	my.list[["BCR-ABL+"]]<- my.groupB.m#
+	my.list[["Normal HSC"]]<- my.groupC.m#
+	beeswarm(my.list, corral="wrap",pch = 19,cex=0.6,col = c("blue","brown","black"),#
+			,ylab="Relative expression",main=my.gene,las=2)#
+	abline(h=min.value-3,lty=2,lwd=1.5,col="grey")#
+	text(c(1:3),min.value-4,labels=my.text,cex=0.80)#
+	boxplot(my.list, add = T,col="#0000ff22",axes=FALSE)#
+	points(c(my.meanA,my.meanB,my.meanC), pch = 22, col = "red", lwd = 2)#
+}#
+dev.off()
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(Hmisc)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+################################################################################
+my.genes<-c("CLU","FCER1A","GAS2","MZB1","RGS2","CXCR4")#
+#
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv","NBM91.csv"),#
+		chip_names=c("plate1","plate2","normal_hsc"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+###############################################################
+my.expr<-my.obj@org.data#
+my.expr$delta.ct[is.na(my.expr$raw_ct)==T]<-0#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.dat$BCR_ABL_status[my.dat$chip=="normal_hsc"]<-"normal_hsc"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+#
+groupC.anno<-subset(my.cell.anno,BCR_ABL_status=="normal_hsc")#
+groupC.cells<-rownames(groupC.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene
+head(x.m)
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(Hmisc)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+################################################################################
+my.genes<-c("CLU","FCER1A","GAS2","MZB1","RGS2","CXCR4")#
+#
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv","NBM91.csv"),#
+		chip_names=c("plate1","plate2","normal_hsc"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+###############################################################
+my.expr<-my.obj@org.data#
+my.expr$delta.ct[is.na(my.expr$raw_ct)==T]<-0#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.dat$BCR_ABL_status[my.dat$chip=="normal_hsc"]<-"normal_hsc"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+#
+groupC.anno<-subset(my.cell.anno,BCR_ABL_status=="normal_hsc")#
+groupC.cells<-rownames(groupC.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+################save data matrix to a file#####################
+write.table(x.m,file="Fig2h.data.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=TRUE, col.names=TRUE)#
+###############################################################
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+groupC.m<-x.m[,colnames(x.m) %in% groupC.cells]#
+###############################################################
+pdf(file="Fig2h.pdf", width=12, height=6, onefile=T, bg="transparent",fonts = NULL,useDingbats=FALSE)#
+#
+par(mfrow=c(2,6),mar=c(4,4,2,2),oma = c(2, 2, 1, 1))#
+#################plot each gene################################
+for(i in 1:length(my.genes)){#
+	my.gene<-my.genes[i]#
+	my.groupA.m<-groupA.m[which(rownames(groupA.m) %in% my.gene),]#
+	my.groupA.sd<-sd(my.groupA.m)#
+	my.groupA.exp<-my.groupA.m[my.groupA.m !=0]#
+	my.groupA.mean2<-mean(my.groupA.exp)#
+	my.groupA.sd2<-sd(my.groupA.exp)#
+	my.groupB.m<-groupB.m[which(rownames(groupB.m) %in% my.gene),]#
+	my.groupB.sd<-sd(my.groupB.m)#
+	my.groupB.exp<-my.groupB.m[my.groupB.m !=0]#
+	my.groupB.mean2<-mean(my.groupB.exp)#
+	my.groupB.sd2<-sd(my.groupB.exp)#
+	my.groupC.m<-groupC.m[which(rownames(groupC.m) %in% my.gene),]#
+	my.groupC.sd<-sd(my.groupC.m)#
+	my.groupC.exp<-my.groupC.m[my.groupC.m !=0]#
+	my.groupC.mean2<-mean(my.groupC.exp)#
+	my.groupC.sd2<-sd(my.groupC.exp)#
+	min.value<-min(my.groupA.m,my.groupB.m,my.groupC.m)#
+	my.groupA.m[my.groupA.m==0]<-min.value-3.5#
+	my.groupB.m[my.groupB.m==0]<-min.value-3.5#
+	my.groupC.m[my.groupC.m==0]<-min.value-3.5#
+	##################Get present/total###############
+	A.present<-length(my.groupA.m[my.groupA.m > min.value-3.5])#
+	A.total<-length(my.groupA.m)#
+	B.present<-length(my.groupB.m[my.groupB.m > min.value-3.5])#
+	B.total<-length(my.groupB.m)#
+	C.present<-length(my.groupC.m[my.groupC.m > min.value-3.5])#
+	C.total<-length(my.groupC.m)#
+	##################################################
+	text.A<-paste(A.present,A.total,sep="/")#
+	text.B<-paste(B.present,B.total,sep="/")#
+	text.C<-paste(C.present,C.total,sep="/")#
+	my.text<-c(text.A,text.B,text.C)#
+	my.medianA<-median(my.groupA.m)#
+	my.medianB<-median(my.groupB.m)#
+	my.medianC<-median(my.groupC.m)#
+	my.meanA<-mean(my.groupA.m)#
+	my.meanB<-mean(my.groupB.m)#
+	my.meanC<-mean(my.groupC.m)#
+	my.list<-list()#
+	my.list[["BCR-ABL-"]]<- my.groupA.m#
+	my.list[["BCR-ABL+"]]<- my.groupB.m#
+	my.list[["Normal HSC"]]<- my.groupC.m#
+	beeswarm(my.list, corral="wrap",pch = 19,cex=0.6,col = c("blue","brown","black"),#
+			,ylab="Relative expression",main=my.gene,las=2)#
+	abline(h=min.value-3,lty=2,lwd=1.5,col="grey")#
+	text(c(1:3),min.value-4,labels=my.text,cex=0.80)#
+	boxplot(my.list, add = T,col="#0000ff22",axes=FALSE)#
+	points(c(my.meanA,my.meanB,my.meanC), pch = 22, col = "red", lwd = 2)#
+}#
+dev.off()
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.heatmap.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR_ABL_FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+###############################################################
+groupA.mean<-data.frame(groupA_mean=rowMeans(groupA.m,na.rm=T))#
+groupA.mean$Gene<-rownames(groupA.mean)#
+groupB.mean<-data.frame(groupB_mean=rowMeans(groupB.m,na.rm=T))#
+groupB.mean$Gene<-rownames(groupB.mean)#
+#
+my.f<-merge(groupA.mean,groupB.mean,all=T)#
+#
+qPCR.df <- data.frame(gene=gene<-my.f$Gene,qPCR.neg = my.f$groupA_mean,qPCR.pos = my.f$groupB_mean)#
+qPCR.df$delta_delta_ct<-qPCR.df$qPCR.pos-qPCR.df$qPCR.neg#
+###############################################################
+###############################################################
+z.m <- dcast(my.expr, gene~cell.name,value.var="log2ex",na.rm=T)#
+t.m<-as.matrix(z.m[,2:ncol(z.m)])#
+rownames(t.m)<-z.m$gene#
+###############################################################
+groupA.m<-t.m[,colnames(t.m) %in% groupA.cells]#
+groupB.m<-t.m[,colnames(t.m) %in% groupB.cells]#
+#
+fishersMethod <-function(x) pchisq(-2 * sum(log(x)),df=2*length(x),lower.tail=FALSE)#
+#
+result.f<-data.frame()#
+#
+for(i in 1:nrow(groupA.m)){#
+	n<-groupA.m[i,]#
+	m<-groupB.m[i,]#
+	n.f<-n[n>0]#
+	m.f<-m[m>0]#
+	x<-length(n)#
+	y<-length(m)#
+	x.1<-length(n.f)#
+	y.1<-length(m.f)#
+	x.2<-x-x.1#
+	y.2<-y-y.1#
+	m.m <- matrix(c(x.1, x.2, y.1, y.2), ncol = 2)#
+	fisher.test.p <-fisher.test(m.m)$p.value#
+	wilcox.p<-wilcox.test(n,m,paired = FALSE)$p.value#
+	all.p<-c(fisher.test.p,wilcox.p)#
+	fisher.p<-fishersMethod (all.p)#
+	my.test.f<-data.frame(nCellA=x,nCellB=y,expCellA=x.1,expCellB=y.1,#
+			expFractionCellA=x.1/x,expFractionCellB=y.1/y,fisher.test.p=fisher.test.p,#
+			wilcox=wilcox.p,fisher=fisher.p)#
+	my.combined<-cbind(qPCR.df[i,],my.test.f)#
+	result.f<-rbind(result.f,my.combined)#
+}#
+#
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+write.table(my.final.result,file="qPCR.testing.differentially.expressed.genes.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.heatmap.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR_ABL_FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR_ABL_FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+###############################################################
+groupA.mean<-data.frame(groupA_mean=rowMeans(groupA.m,na.rm=T))#
+groupA.mean$Gene<-rownames(groupA.mean)#
+groupB.mean<-data.frame(groupB_mean=rowMeans(groupB.m,na.rm=T))#
+groupB.mean$Gene<-rownames(groupB.mean)#
+#
+my.f<-merge(groupA.mean,groupB.mean,all=T)#
+#
+qPCR.df <- data.frame(gene=gene<-my.f$Gene,qPCR.neg = my.f$groupA_mean,qPCR.pos = my.f$groupB_mean)#
+qPCR.df$delta_delta_ct<-qPCR.df$qPCR.pos-qPCR.df$qPCR.neg#
+###############################################################
+###############################################################
+z.m <- dcast(my.expr, gene~cell.name,value.var="log2ex",na.rm=T)#
+t.m<-as.matrix(z.m[,2:ncol(z.m)])#
+rownames(t.m)<-z.m$gene#
+###############################################################
+groupA.m<-t.m[,colnames(t.m) %in% groupA.cells]#
+groupB.m<-t.m[,colnames(t.m) %in% groupB.cells]#
+#
+fishersMethod <-function(x) pchisq(-2 * sum(log(x)),df=2*length(x),lower.tail=FALSE)#
+#
+result.f<-data.frame()#
+#
+for(i in 1:nrow(groupA.m)){#
+	n<-groupA.m[i,]#
+	m<-groupB.m[i,]#
+	n.f<-n[n>0]#
+	m.f<-m[m>0]#
+	x<-length(n)#
+	y<-length(m)#
+	x.1<-length(n.f)#
+	y.1<-length(m.f)#
+	x.2<-x-x.1#
+	y.2<-y-y.1#
+	m.m <- matrix(c(x.1, x.2, y.1, y.2), ncol = 2)#
+	fisher.test.p <-fisher.test(m.m)$p.value#
+	wilcox.p<-wilcox.test(n,m,paired = FALSE)$p.value#
+	all.p<-c(fisher.test.p,wilcox.p)#
+	fisher.p<-fishersMethod (all.p)#
+	my.test.f<-data.frame(nCellA=x,nCellB=y,expCellA=x.1,expCellB=y.1,#
+			expFractionCellA=x.1/x,expFractionCellB=y.1/y,fisher.test.p=fisher.test.p,#
+			wilcox=wilcox.p,fisher=fisher.p)#
+	my.combined<-cbind(qPCR.df[i,],my.test.f)#
+	result.f<-rbind(result.f,my.combined)#
+}#
+#
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+write.table(my.final.result,file="qPCR.testing.differentially.expressed.genes.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR_ABL_FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}
+head(my.expr)
+my.expr
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)
+my.expr
+head(my.expr)
+table(my.expr$gene)
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)
+my.cell.anno
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+###############################################################
+groupA.mean<-data.frame(groupA_mean=rowMeans(groupA.m,na.rm=T))#
+groupA.mean$Gene<-rownames(groupA.mean)#
+groupB.mean<-data.frame(groupB_mean=rowMeans(groupB.m,na.rm=T))#
+groupB.mean$Gene<-rownames(groupB.mean)#
+#
+my.f<-merge(groupA.mean,groupB.mean,all=T)#
+#
+qPCR.df <- data.frame(gene=gene<-my.f$Gene,qPCR.neg = my.f$groupA_mean,qPCR.pos = my.f$groupB_mean)#
+qPCR.df$delta_delta_ct<-qPCR.df$qPCR.pos-qPCR.df$qPCR.neg#
+###############################################################
+###############################################################
+z.m <- dcast(my.expr, gene~cell.name,value.var="log2ex",na.rm=T)#
+t.m<-as.matrix(z.m[,2:ncol(z.m)])#
+rownames(t.m)<-z.m$gene#
+###############################################################
+groupA.m<-t.m[,colnames(t.m) %in% groupA.cells]#
+groupB.m<-t.m[,colnames(t.m) %in% groupB.cells]#
+#
+fishersMethod <-function(x) pchisq(-2 * sum(log(x)),df=2*length(x),lower.tail=FALSE)#
+#
+result.f<-data.frame()#
+#
+for(i in 1:nrow(groupA.m)){#
+	n<-groupA.m[i,]#
+	m<-groupB.m[i,]#
+	n.f<-n[n>0]#
+	m.f<-m[m>0]#
+	x<-length(n)#
+	y<-length(m)#
+	x.1<-length(n.f)#
+	y.1<-length(m.f)#
+	x.2<-x-x.1#
+	y.2<-y-y.1#
+	m.m <- matrix(c(x.1, x.2, y.1, y.2), ncol = 2)#
+	fisher.test.p <-fisher.test(m.m)$p.value#
+	wilcox.p<-wilcox.test(n,m,paired = FALSE)$p.value#
+	all.p<-c(fisher.test.p,wilcox.p)#
+	fisher.p<-fishersMethod (all.p)#
+	my.test.f<-data.frame(nCellA=x,nCellB=y,expCellA=x.1,expCellB=y.1,#
+			expFractionCellA=x.1/x,expFractionCellB=y.1/y,fisher.test.p=fisher.test.p,#
+			wilcox=wilcox.p,fisher=fisher.p)#
+	my.combined<-cbind(qPCR.df[i,],my.test.f)#
+	result.f<-rbind(result.f,my.combined)#
+}#
+#
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+write.table(my.final.result,file="qPCR.testing.differentially.expressed.genes.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+###############################################################
+groupA.mean<-data.frame(groupA_mean=rowMeans(groupA.m,na.rm=T))#
+groupA.mean$Gene<-rownames(groupA.mean)#
+groupB.mean<-data.frame(groupB_mean=rowMeans(groupB.m,na.rm=T))#
+groupB.mean$Gene<-rownames(groupB.mean)#
+#
+my.f<-merge(groupA.mean,groupB.mean,all=T)#
+#
+qPCR.df <- data.frame(gene=gene<-my.f$Gene,qPCR.neg = my.f$groupA_mean,qPCR.pos = my.f$groupB_mean)#
+qPCR.df$delta_delta_ct<-qPCR.df$qPCR.pos-qPCR.df$qPCR.neg#
+###############################################################
+###############################################################
+z.m <- dcast(my.expr, gene~cell.name,value.var="log2ex",na.rm=T)#
+t.m<-as.matrix(z.m[,2:ncol(z.m)])#
+rownames(t.m)<-z.m$gene#
+###############################################################
+groupA.m<-t.m[,colnames(t.m) %in% groupA.cells]#
+groupB.m<-t.m[,colnames(t.m) %in% groupB.cells]#
+#
+fishersMethod <-function(x) pchisq(-2 * sum(log(x)),df=2*length(x),lower.tail=FALSE)#
+#
+result.f<-data.frame()#
+#
+for(i in 1:nrow(groupA.m)){#
+	n<-groupA.m[i,]#
+	m<-groupB.m[i,]#
+	n.f<-n[n>0]#
+	m.f<-m[m>0]#
+	x<-length(n)#
+	y<-length(m)#
+	x.1<-length(n.f)#
+	y.1<-length(m.f)#
+	x.2<-x-x.1#
+	y.2<-y-y.1#
+	m.m <- matrix(c(x.1, x.2, y.1, y.2), ncol = 2)#
+	fisher.test.p <-fisher.test(m.m)$p.value#
+	wilcox.p<-wilcox.test(n,m,paired = FALSE)$p.value#
+	all.p<-c(fisher.test.p,wilcox.p)#
+	fisher.p<-fishersMethod (all.p)#
+	my.test.f<-data.frame(nCellA=x,nCellB=y,expCellA=x.1,expCellB=y.1,#
+			expFractionCellA=x.1/x,expFractionCellB=y.1/y,fisher.test.p=fisher.test.p,#
+			wilcox=wilcox.p,fisher=fisher.p)#
+	my.combined<-cbind(qPCR.df[i,],my.test.f)#
+	result.f<-rbind(result.f,my.combined)#
+}#
+#
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+write.table(my.final.result,file="qPCR.statistical.analysis.diff.genes.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)
+head(my.final.result)
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+my.genes<-c("CLU","FCER1A","GAS2","MZB1","RGS2","CXCR4")#
+genes.statitical.info<-my.final.result[my.final.result$gene %in% my.genes,]
+genes.statitical.info
+##########################Requirement packages#################################
+library(data.table)#
+library(beeswarm)#
+library(reshape2)#
+library(MASS)#
+library(pheatmap)#
+library(Biobase)#
+library(gplots)#
+library(RColorBrewer)#
+################################################################################
+source("../Data/SingleCellBiomarkFileFormat.R")#
+source("../Data/SingleCellClasses.R")#
+source("../Data/SingleCellDataManipulations.R")#
+source("../Data/SingleCellGenerics.R")#
+source("../Data/SingleCellPlots.R")#
+################################################################################
+LOD=30#
+#
+my.obj<-new("SingleCellFluidigm",#
+		biomark_files=c("20150127_OX1407.heatmap.csv","OX1407_plate2.csv"),#
+		chip_names=c("plate1","plate2"),#
+		data_dir="Biomark_files/",#
+		LOD=LOD)#
+#
+getTableOfCtValues(my.obj)#
+normalizeCtValuesByHouseKeepingGenes(my.obj,houseKeeping.genes=c("GAPDH","B2M"))#
+#
+my.expr<-my.obj@org.data#
+###############################################################
+getBCR_ABL_Annotation<-function(obj,bcr_abl="BCR-ABL1 FUSION"){#
+	obj<-my.expr#
+	my.dat<-subset(obj,gene==bcr_abl)#
+	my.dat$BCR_ABL_status<-"positive"#
+	my.dat$BCR_ABL_status[is.na(my.dat$raw_ct)==T]<-"negative"#
+	my.anno<-my.dat["BCR_ABL_status"]#
+	rownames(my.anno)<-my.dat$cell.name#
+	return(my.anno)#
+}#
+###############################################################
+my.cell.anno<-getBCR_ABL_Annotation(my.expr)#
+#
+groupA.anno<-subset(my.cell.anno,BCR_ABL_status=="negative")#
+groupA.cells<-rownames(groupA.anno)#
+#
+groupB.anno<-subset(my.cell.anno,BCR_ABL_status=="positive")#
+groupB.cells<-rownames(groupB.anno)#
+m.m <- dcast(my.expr, gene~cell.name,value.var="delta.ct",na.rm=T)#
+x.m<-as.matrix(m.m[,2:ncol(m.m)])#
+rownames(x.m)<-m.m$gene#
+#
+groupA.m<-x.m[,colnames(x.m) %in% groupA.cells]#
+groupB.m<-x.m[,colnames(x.m) %in% groupB.cells]#
+###############################################################
+groupA.mean<-data.frame(groupA_mean=rowMeans(groupA.m,na.rm=T))#
+groupA.mean$Gene<-rownames(groupA.mean)#
+groupB.mean<-data.frame(groupB_mean=rowMeans(groupB.m,na.rm=T))#
+groupB.mean$Gene<-rownames(groupB.mean)#
+#
+my.f<-merge(groupA.mean,groupB.mean,all=T)#
+#
+qPCR.df <- data.frame(gene=gene<-my.f$Gene,qPCR.neg = my.f$groupA_mean,qPCR.pos = my.f$groupB_mean)#
+qPCR.df$delta_delta_ct<-qPCR.df$qPCR.pos-qPCR.df$qPCR.neg#
+###############################################################
+###############################################################
+z.m <- dcast(my.expr, gene~cell.name,value.var="log2ex",na.rm=T)#
+t.m<-as.matrix(z.m[,2:ncol(z.m)])#
+rownames(t.m)<-z.m$gene#
+###############################################################
+groupA.m<-t.m[,colnames(t.m) %in% groupA.cells]#
+groupB.m<-t.m[,colnames(t.m) %in% groupB.cells]#
+#
+fishersMethod <-function(x) pchisq(-2 * sum(log(x)),df=2*length(x),lower.tail=FALSE)#
+#
+result.f<-data.frame()#
+#
+for(i in 1:nrow(groupA.m)){#
+	n<-groupA.m[i,]#
+	m<-groupB.m[i,]#
+	n.f<-n[n>0]#
+	m.f<-m[m>0]#
+	x<-length(n)#
+	y<-length(m)#
+	x.1<-length(n.f)#
+	y.1<-length(m.f)#
+	x.2<-x-x.1#
+	y.2<-y-y.1#
+	m.m <- matrix(c(x.1, x.2, y.1, y.2), ncol = 2)#
+	fisher.test.p <-fisher.test(m.m)$p.value#
+	wilcox.p<-wilcox.test(n,m,paired = FALSE)$p.value#
+	all.p<-c(fisher.test.p,wilcox.p)#
+	fisher.p<-fishersMethod (all.p)#
+	my.test.f<-data.frame(nCellA=x,nCellB=y,expCellA=x.1,expCellB=y.1,#
+			expFractionCellA=x.1/x,expFractionCellB=y.1/y,fisher.test.p=fisher.test.p,#
+			wilcox=wilcox.p,fisher=fisher.p)#
+	my.combined<-cbind(qPCR.df[i,],my.test.f)#
+	result.f<-rbind(result.f,my.combined)#
+}#
+#
+my.final.result<-result.f[order(result.f$fisher),]#
+################################################################
+my.genes<-c("CLU","FCER1A","GAS2","MZB1","RGS2","CXCR4")#
+genes.statitical.info<-my.final.result[my.final.result$gene %in% my.genes,]#
+#
+write.table(genes.statitical.info,file="Fig2h.statistical.values.matrix.txt",#
+		append=FALSE, sep="\t", quote=FALSE,row.names=FALSE, col.names=TRUE)

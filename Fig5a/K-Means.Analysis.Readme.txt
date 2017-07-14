@@ -1,0 +1,23 @@
+###Remark####
+To assign the cluster of cells, we performed K-Means clustering analysis using k=3 
+on top of the tSNE result "tSNE_NormalDiagnosisRemission_500_No1M_TKI.FINAL-1.txt".
+
+We use a standard K-Means function to assign cells into 3 clusters:
+
+fit1<-kmeans(tSNE.result,my.centers,iter.max = 1000)
+
+We selected these following cells as the centers:
+
+Cell	ClusterID
+NBMpool14C3	A
+NBM_ERCCG5	A
+NBM_ERCCE3	A
+OX967H5	B
+OX2038H1	B
+OX2038F4	B
+OX703_PL2C7	C
+OX2125C8	C
+OX1570D3	C
+
+We then assigned the groups of cells which can be found in the file 
+"tSNE_NormalDiagnosisRemission_500_No1M_TKI.FINAL_V4-with-Kmean-Assignment.txt".
