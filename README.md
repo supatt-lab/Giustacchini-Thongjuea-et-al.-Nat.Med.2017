@@ -1,5 +1,5 @@
 # Giustacchini-Thongjuea-et-al.-Nat.Med.2017
-Scripts for generating figures for Giustacchini and Thongjuea et al. for our Nature Medicine paper in 2017
+R-codes for generating figures for Giustacchini and Thongjuea et al. for our Nature Medicine paper in 2017
 
 These are the codes for generating figures found in Giustacchini and Thongjuea et.al., 
 Nat.Med.2017 "Single-cell transcriptomics uncovers distinct molecular signatures of stem cells in chronic myeloid leukemia".
